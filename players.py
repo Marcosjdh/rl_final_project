@@ -68,6 +68,6 @@ class DictPolicyPlayer():
         board_tuple = tuple((board * self.player).reshape(-1))
         action = self.pi_dict[board_tuple]
         if self.flatten_action:
-            return action
-        else:
             return [action // self.board_shape, action % self.board_shape]
+        else:
+            return action
